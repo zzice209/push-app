@@ -7,5 +7,11 @@ let vapidKeys = {
 
 push.setVapidDetails('mailto:test@somewhere', vapidKeys.publicKey, vapidKeys.privateKey)
 
-let sub = {}
+let sub = {
+    endpoint: "https://fcm.googleapis.com/fcm/send/foq3QaTICGY:APA91bHoP8D7GZVS57F614hcBEN8WrGdwEuZBHIWvLCQrrynB3lRWgS_RVN1TV43Be1IMJYWTgafxa4hECOvKgK47pHJGu8CAHvD_QZ929GVaKjuUnTZP3oBJQS9ovzbYQT8_7tWIo2t", "expirationTime": null,
+    keys: {
+        p256dh: "BPKW_bkS62k2Yk1s3A5eHvtGWjjKjml8v8PnY_y0xal_sp9neexOTTLYpHen3CIBui3SioTf1m1HqZCv65L4pzA",
+        auth: "BPP9rIkNBWvlVqJCp7t-rw"
+    }
+}
 push.sendNotification(sub, 'test message')
