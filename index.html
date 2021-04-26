@@ -24,9 +24,7 @@
                 applicationServerKey: 'BN1lQesf-PDGj5DzenTupOOCV5_l35Zbc63wvlPxJS84gT3HgfYbImwo7MGUJiyP2l9iyX6ZEkRC86DlJbwFMBM'
             })
             console.log(JSON.stringify(push));
-            var node = document.createElement("p");
-            var textnode = document.createTextNode(push);
-            document.getElementById('append').appendChild(node);
+            document.getElementById('append').append(`<p>${push}</p>`);
         }
 
     </script>
