@@ -23,8 +23,9 @@
                 userVisibleOnly: true,
                 applicationServerKey: 'BN1lQesf-PDGj5DzenTupOOCV5_l35Zbc63wvlPxJS84gT3HgfYbImwo7MGUJiyP2l9iyX6ZEkRC86DlJbwFMBM'
             })
+            let pushString = JSON.stringify(push);
             console.log(JSON.stringify(push));
-            document.getElementById('append').append(`<p>${push}</p>`);
+            document.getElementById('append').append(`<p>${pushString}</p>`);
         }
 
     </script>
