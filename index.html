@@ -8,7 +8,7 @@
 </head>
 <body>
     <button onclick="subcribe()">Subcribe</button>
-
+    <div class="append"></p>
     <script>
         addEventListener('load', async () => {
             let sw = await navigator.serviceWorker.register('./sw.js')
@@ -22,6 +22,7 @@
                 applicationServerKey: 'BN1lQesf-PDGj5DzenTupOOCV5_l35Zbc63wvlPxJS84gT3HgfYbImwo7MGUJiyP2l9iyX6ZEkRC86DlJbwFMBM'
             })
             console.log(JSON.stringify(push));
+            document.getElementsByClassName('append').appendChild(`<p>${push}</p>`)
         }
 
     </script>
