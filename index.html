@@ -30,16 +30,6 @@
             await autoPush(push);
         }
 
-        async function autoPush(subscription) {
-            await fetch("/subscribe", {
-                method: "POST",
-                body: JSON.stringify(subscription),
-                headers: {
-                    "content-type": "application/json"
-                }
-            });
-        }
-
     </script>
 </body>
 
