@@ -7,7 +7,7 @@ let vapidKeys = {
 }
 
 // VAPID keys should only be generated only once.
-// const vapidKeys = webpush.generateVAPIDKeys();
+const vapidKeys = webpush.generateVAPIDKeys();
 push.setVapidDetails(
     'mailto:test@code.co.uk',
     vapidKeys.publicKey,
