@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -11,6 +11,7 @@
 <body>
     <button onclick="subcribe()">Subcribe chrome</button>
     <div id="append"></div>
+    <script src="push.js"></script>
     <script>
         addEventListener('load', async () => {
             let sw = await navigator.serviceWorker.register('./sw.js')
@@ -26,6 +27,17 @@
             let pushString = JSON.stringify(push);
             console.log(JSON.stringify(push));
             document.getElementById('append').append(`<p>${pushString}</p>`);
+            await autoPush(push);
+        }
+
+        async function autoPush(subscription) {
+            await fetch("/subscribe", {
+                method: "POST",
+                body: JSON.stringify(subscription),
+                headers: {
+                    "content-type": "application/json"
+                }
+            });
         }
 
     </script>
